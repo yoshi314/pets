@@ -14,4 +14,4 @@ HEALTHCHECK CMD curl --fail http://localhost:5000/health || exit 1
 EXPOSE 5000
 EXPOSE 7000
 
-CMD python app.py & python admin.py
+CMD gunicorn app.py & gunicorn admin.py
